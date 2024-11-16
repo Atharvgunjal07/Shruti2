@@ -1,0 +1,106 @@
+/* Importing literature-style fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Playfair+Display:wght@400;700&display=swap');
+
+/* Global styles */
+body {
+  body {
+    background-color: #E9F5DB !important;  /* Use !important to override Tailwind's bg classes */
+  }
+  
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif; /* Literary font for the main content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+
+/* Container layout */
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  border: 2px solid #bfb9b8;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background-color: #8dad68; /* Light grey background for the box */
+}
+
+/* Photo slider */
+.slider {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-right: 2px solid #695c4c;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  animation: fade-in 1s ease-in-out forwards;
+}
+
+.slider img:first-child {
+  display: block;
+}
+
+/* Keyframe animation for smooth transition */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Content Section */
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #F2F2F2; /* Light grey for the text box */
+  color: #464544; /* Greyish text for better readability */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-left: 2px solid #c2bdbd;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle inner shadow for depth */
+}
+
+h1 {
+  font-family: 'Playfair Display', serif; /* More prominent literary font */
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #173817; /* Slightly darker grey for headings */
+}
+
+.timer, .age {
+  font-family: 'Cormorant Garamond', serif; /* Softer font for the timer/age */
+  margin-top: 10px;
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #b9b8b8; /* Greyish text for timer and age */
+}
+
+/* Attractive font for paragraph */
+.attractive-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #f1f1f1;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease-in-out; /* Optional animation for fade-in effect */
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+

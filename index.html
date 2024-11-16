@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Shrutika</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" href="shruti.css">
+  <style>
+    /* Custom Keyframes for animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .animate-slide-in {
+      animation: slideIn 1s ease-in-out;
+    }
+
+    /* Popup overlay styling */
+    #popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7); /* Darken the background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;  /* Make sure it appears above everything else */
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+      padding: 20px;
+      opacity: 1;
+      transition: opacity 2s ease-in-out; /* Smooth fade transition */
+    }
+
+    #popup img {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Text and background blur effect */
+    .blurred-background {
+      filter: blur(60px); /* Blur the background content */
+      transition: filter 0.3s;
+    }
+
+    #popup.hidden {
+      opacity: 0;
+      pointer-events: none;  /* Prevent interaction when the popup is hidden */
+    }
+
+    #popup .text {
+      margin-top: 20px;
+      font-size: 1.5rem;
+    }
+
+    /* Ensure the popup content is not blurred */
+    .no-blur #popup {
+      filter: none !important;
+    }
+  </style>
+</head>
+<body class="bg-[#556b2f] text-gray-100 font-sans flex items-center justify-center h-screen">
+
+<b></b>
+  <!-- Main Content -->
+  <div id="backgroundContent" class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 p-4">
+    <h1 class=""header-text text-center animate-bounce>You is me and me is You 💜🤍</h1>
+    <b></b>
+    <!-- Photo Slider Section -->
+    <div class="slider relative overflow-hidden h-[400px] rounded-lg shadow-lg">
+      <div id="photoSlider" class="absolute w-full h-full">
+        <img src="photo1.JPG" alt="Celebration Image 1" class="slide w-full h-full object-cover rounded-lg">
+        <img src="photo2.jpeg" alt="Celebration Image 2" class="slide w-full h-full object-cover rounded-lg">
+        <img src="photo3.jpeg" alt="Celebration Image 3" class="slide w-full h-full object-cover rounded-lg">
+        <img src="photo4.JPG" alt="Celebration Image 4" class="slide w-full h-full object-cover rounded-lg">
+        <img src="photo5.jpeg" alt="Celebration Image 4" class="slide w-full h-full object-cover rounded-lg">
+        <img src="photo6.JPG" alt="Celebration Image 4" class="slide w-full h-full object-cover rounded-lg">
+        <img src="photo7.jpeg" alt="Celebration Image 4" class="slide w-full h-full object-cover rounded-lg">
+        <img src="photo8.jpeg" alt="Celebration Image 4" class="slide w-full h-full object-cover rounded-lg">
+        <img src="photo9.jpeg" alt="Celebration Image 4" class="slide w-full h-full object-cover rounded-lg">
+        <img src="photo10.jpeg" alt="Celebration Image 4" class="slide w-full h-full object-cover rounded-lg">
+        <img src="photo11.jpeg" alt="Celebration Image 4" class="slide w-full h-full object-cover rounded-lg">
+        <img src="photo12.JPG" alt="Celebration Image 4" class="slide w-full h-full object-cover rounded-lg">
+        <img src="photo13.JPG" alt="Celebration Image 4" class="slide w-full h-full object-cover rounded-lg">
+        <img src="photo14.JPG" alt="Celebration Image 4" class="slide w-full h-full object-cover rounded-lg">
+        <img src="photo15.jpeg" alt="Celebration Image 4" class="slide w-full h-full object-cover rounded-lg">
+        <img src="photo16.JPG" alt="Celebration Image 4" class="slide w-full h-full object-cover rounded-lg">
+        <img src="photo17.jpeg" alt="Celebration Image 4" class="slide w-full h-full object-cover rounded-lg">
+        <img src="photo18.jpeg" alt="Celebration Image 4" class="slide w-full h-full object-cover rounded-lg">
+        <img src="photo19.jpeg" alt="Celebration Image 4" class="slide w-full h-full object-cover rounded-lg">
+        <img src="photo20.jpeg" alt="Celebration Image 4" class="slide w-full h-full object-cover rounded-lg">
+        <img src="photo21.jpeg" alt="Celebration Image 4" class="slide w-full h-full object-cover rounded-lg">
+
+      </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content flex flex-col justify-center items-center space-y-6 p-4 bg-#B2BEB5-700 rounded-lg shadow-lg">
+      <h1 class="text-3xl lg:text-5xl font-bold text-center animate-fade-in">
+        Happy Birthday Shrutika Kharade! 🎂
+      </h1>
+      <div id="age" class="text-xl lg:text-2xl text-center font-medium animate-slide-in"></div>
+
+      <!-- Interactive Button linking to another page -->
+      <a href="mail.html">
+        <button class="px-6 py-3 mt-6 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold text-xl rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:from-purple-600 hover:to-indigo-700 focus:outline-none focus:ring-4 focus:ring-purple-300">
+          FOR MOMMY ✉️
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Popup Overlay -->
+  <div id="popup">
+    <div>
+      <img src="spotify.jpeg" alt="Popup Image"> <!-- Replace with your image -->
+      <div class="text">SCAN TO PLAY! YOU HAVE 25 SECONDS</div> <!-- Text shown with the image -->
+    </div>
+  </div> 
+
+
+  <script src="shruti.js"></script>
+
+  <!-- Confetti Script to trigger on page load -->
+  <script>
+    window.onload = function() {
+      // Apply blur effect to the background content only
+      document.getElementById('backgroundContent').classList.add('blurred-background');
+
+      // Show popup for 25 seconds
+      setTimeout(function() {
+        // Hide the popup after 25 seconds by adding the hidden class (sets opacity to 0)
+        document.getElementById('popup').classList.add('hidden');
+        // Remove the blur effect from the background
+        document.getElementById('backgroundContent').classList.remove('blurred-background');
+        
+        // Trigger confetti animation after the popup disappears
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.5 }
+        });
+      }, 25000); // 25000ms = 25 seconds
+    };
+  </script>
+
+</body>
+</html>

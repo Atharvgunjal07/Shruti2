@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENVELOPE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+  <style>
+    /* Importing a simple and readable cursive font */
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #bbbbbb;
+      background-image: url(photo0.jpg); 
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: left;
+      font-size: 1.2rem;
+      color: #183813;  /* Dark green font color */
+      font-weight: bold;
+      background-color: #c0c0c0;
+      padding: 20px;
+      height: 90vh;
+      width: 90%;
+      overflow-y: auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+      padding-right: 10px;
+      max-width: 900px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #183813;  /* Dark green for the heading */
+    }
+
+    /* Styling for paragraphs */
+    p {
+      line-height: 1.8;  /* Improved line spacing for readability */
+      margin-bottom: 15px;
+      font-family: 'Dancing Script', cursive;  /* Simpler cursive font */
+      color: #183813;  /* Dark green font color */
+      font-size: 1.4rem;  /* Slightly larger font size for readability */
+      text-align: justify;  /* Justify text for even spacing */
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    /* Optional: Adding a romantic touch with the 'content' class */
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <p>To Shrutika Kharade,</p>
+    <p> (my kuski from KoparKhairne )</p>
+    <p> So I just made this in like 2 hours for idk why, you are turning 21 tomorrow like wow. 
+        when i entered my 20s it was a whole new feeling but yeah you are 10 months elder so my mommy hehe!
+        turning 21 now, knowing you will enter a new chapter is a whole new challenge ig and that too in exams 
+        toh just wow and sad. i know you are someone who gets excited yes you do but at the same time you dont want 
+        others to know that you get excited, you want to be free but at the same time remain a mystery, maybe even 
+        dance off the floor but also remain quite and shy in a corner, in short i have descirved be in some way. 
+        hehe cannot blame we both are so similar. you are wonderful everyday i talk to you i dont get bored honestly 
+        ha i tend to sleep but that is because i am wayyy to comfortbale,. you have a wonderful family one with values 
+        and drama haha classics! but yeah you still bind together in the end all of you. and yeah i am scared at times 
+        for i dont want to loose you ever. i am addicted to you quite literally. i know sounds stupid i know.  
+        you are special to me in many ways cause i have felt this connect with you which is instant. 
+        yeah you are difficult at times i have to admit that but that is who you are and that i acccept. i love you the 
+        way you are! that is the baseline from where i think the line should be drawn for thinking further.  
+    </p>
+    <p> there are so many things which i dont have the answer about at the moment on wh, how and just freaking 
+        is it real? i even pinch myself sometimes by the fact that it is not real! hahah i am GRATEFUL to have you in my 
+        life at the moment. idc what anyone says or thinks of me as long as you are there with me and we are having the 
+        time of our lives together! 
+        just imagine who could have imagined us? its very unreal actually. thining of the first days i saw you and how 
+        important and integral part of my life you have become. like INDISPENSABLE at times. I can move mountains for you 
+        yes! i can say that cause maybe i look back at my past and this has been the most daring time of my life. 
+        but it is something I CHOOOSE. you didnt lead me to anything or even think about it for the matter of fact.
+    </p>
+    <p> i love us together every moment that we have had, evry picture, every time i have touched your skin,
+        grabbed your hand, patted you, fixed your hair, played with your hair, kissed, fingered, lusted, loved, cared, 
+        looked around for you, misses you, longed for you...yes maybe i have gone crazy in a way i admit. 
+        but yeah i know its Shruti who is similar but also different to me in many ways, we look very cute together 
+        always have and always will. the moment you come anytime lights up my day and makes it something to look forward to. 
+        you make me a better person, better performer, better lover and yeah most importantly you make me feel something. 
+        there is a lot more i can say and i think you know all about it, i am forever grateful to have you in my life 
+        and i will rejoice every moment, and yes PLAN A was getting together with you, pretty much the day maybe i had 
+        realised how much i had fell for you. I was and I am so in LOVE WITH YOU. 
+        ok ok you know a lot about us already. 
+    </p>
+    <b></b>
+    <p>
+        FROM YOUR KUSKA,
+        waiting for you at the lake ( please say yes)</p>
+  </div>
+
+  <script>
+    // Function to trigger flower confetti on page load
+    window.onload = function() {
+      confetti({
+        particleCount: 3000,  // Increased particle count for a fuller effect
+        spread: 100,  // Adjust spread to cover more area
+        angle: 90,  // Ensure particles fall straight down
+        origin: { x: 0.5, y: 0 },  // Start from the top-center of the screen
+        colors: ['#FF6347', '#FFD700', '#FF69B4'],  // Flower-like colors
+        shapes: ['circle', 'square'],  // Flower-like shapes
+        gravity: 0.4,  // Lower gravity for slower, softer fall
+        drift: 0.2,  // Introduce slight horizontal drift for natural movement
+        ticks: 500,  // Keep the confetti particles falling for a longer time
+        scalar: 0.5,  // Smaller confetti size for a more delicate appearance
+      });
+
+      // Optional: Trigger confetti again after a slight delay for better visibility
+      setTimeout(function() {
+        confetti({
+          particleCount: 500,
+          spread: 100,
+          angle: 90,
+          origin: { x: 0.5, y: 0 },
+          colors: ['#FF6347', '#FFD700', '#FF69B4'],
+          shapes: ['circle', 'square'],
+          gravity: 0.4,
+          drift: 0.2,
+          ticks: 500,
+          scalar: 0.5,
+        });
+      }, 500);
+    };
+  </script>
+
+</body>
+</html>
