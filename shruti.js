@@ -3,24 +3,38 @@ const birthDate = new Date('2003-11-18T00:00:00');
 
 function updateAge() {
   const now = new Date();
-  let diff = now - birthDate; // Time difference in milliseconds
 
-  const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
-  diff %= 1000 * 60 * 60 * 24 * 365.25;
+  // Calculate differences
+  let years = now.getFullYear() - birthDate.getFullYear();
+  let months = now.getMonth() - birthDate.getMonth();
+  let days = now.getDate() - birthDate.getDate();
+  let hours = now.getHours() - birthDate.getHours();
+  let minutes = now.getMinutes() - birthDate.getMinutes();
+  let seconds = now.getSeconds() - birthDate.getSeconds();
 
-  const months = Math.floor(diff / (1000 * 60 * 60 * 24 * 30.44));
-  diff %= 1000 * 60 * 60 * 24 * 30.44;
-
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  diff %= 1000 * 60 * 60 * 24;
-
-  const hours = Math.floor(diff / (1000 * 60 * 60));
-  diff %= 1000 * 60 * 60;
-
-  const minutes = Math.floor(diff / (1000 * 60));
-  diff %= 1000 * 60;
-
-  const seconds = Math.floor(diff / 1000);
+  // Adjust for negative values
+  if (seconds < 0) {
+    seconds += 60;
+    minutes--;
+  }
+  if (minutes < 0) {
+    minutes += 60;
+    hours--;
+  }
+  if (hours < 0) {
+    hours += 24;
+    days--;
+  }
+  if (days < 0) {
+    // Calculate days in the previous month
+    const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+    days += prevMonth.getDate();
+    months--;
+  }
+  if (months < 0) {
+    months += 12;
+    years--;
+  }
 
   // Display the age
   document.getElementById('age').textContent =
